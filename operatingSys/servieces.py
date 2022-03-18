@@ -12,3 +12,10 @@ def importXml(filePath,data):
     
     # writing new data
     ret = os.write(fd,data.encode())
+    
+    # removine empty lines
+    with open(filePath) as xmlfile:
+        lines = [line for line in xmlfile if line.strip() is not ""]
+
+    with open(filePath, "w") as xmlfile:
+        xmlfile.writelines(lines)
