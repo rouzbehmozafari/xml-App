@@ -12,4 +12,4 @@ importXml(xmlFolderAddress,xmlData) #writes the fetched xml to desired address
 root = ET.parse(xmlFolderAddress).getroot()
 
 #generating Html files from xml data
-htmlValueExtractor(root) 
+htmlValueExtractor(root)  
